@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">88.88% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>16/18</span>
+                <span class='fraction'>18/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">91.66% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>6/12</span>
+                <span class='fraction'>11/12</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">88.23% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>15/17</span>
+                <span class='fraction'>17/17</span>
             </div>
         
             
@@ -171,31 +171,31 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -216,7 +216,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -286,9 +286,9 @@ export default function EnviaLance({ enviaLance, cor }) {
 &nbsp;
     const estadoLance = await enviaLance(valor);
 &nbsp;
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (estadoLance === ENVIADO) {
-<span class="cstat-no" title="statement not covered" >      setValor('');</span>
-<span class="cstat-no" title="statement not covered" >      setSucesso(estadoLance);</span>
+    if (estadoLance === ENVIADO) {
+      setValor('');
+      setSucesso(estadoLance);
     } else {
       setErro(estadoLance);
     }
@@ -297,8 +297,8 @@ export default function EnviaLance({ enviaLance, cor }) {
   }
 &nbsp;
   return &lt;BlurView intensity={Platform.OS === 'ios' ? 10 : <span class="branch-1 cbranch-no" title="branch not covered" >100}</span> style={estilos.fundo} tint="light"&gt;
-    {!!erro &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;Text style={estilos.erro}&gt;{erro}&lt;/Text&gt;}</span>
-    {!!sucesso &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >&lt;Text style={estilos.sucesso}&gt;{sucesso}&lt;/Text&gt;}</span>
+    {!!erro &amp;&amp; &lt;Text style={estilos.erro}&gt;{erro}&lt;/Text&gt;}
+    {!!sucesso &amp;&amp; &lt;Text style={estilos.sucesso}&gt;{sucesso}&lt;/Text&gt;}
     &lt;TextInput 
       value={valor} 
       onChangeText={setValor}
@@ -349,8 +349,8 @@ const funcaoEstilos = (cor, erro) =&gt; StyleSheet.create({
   entrada: {
     flex: 1,
     borderWidth: 1,
-    borderColor: erro ? <span class="branch-0 cbranch-no" title="branch not covered" >'#FF0000' </span>: '#4A4A4A',
-    color: erro ? <span class="branch-0 cbranch-no" title="branch not covered" >'#FF0000' </span>: '#4A4A4A',
+    borderColor: erro ? '#FF0000' : '#4A4A4A',
+    color: erro ? '#FF0000' : '#4A4A4A',
     borderRadius: 16,
     height: 53,
 &nbsp;
@@ -373,7 +373,7 @@ const funcaoEstilos = (cor, erro) =&gt; StyleSheet.create({
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-08-04T19:53:10.051Z
+                at 2022-08-04T20:58:10.750Z
             </div>
         <script src="../../../../../prettify.js"></script>
         <script>
