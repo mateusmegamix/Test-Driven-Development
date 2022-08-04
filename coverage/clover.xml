@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1659646690840" clover="3.2.0">
-  <project timestamp="1659646690840" name="All files">
+<coverage generated="1659646730099" clover="3.2.0">
+  <project timestamp="1659646730100" name="All files">
     <metrics statements="140" coveredstatements="137" conditionals="43" coveredconditionals="39" methods="42" coveredmethods="41" elements="225" coveredelements="217" complexity="0" loc="140" ncloc="140" packages="13" files="19" classes="19"/>
     <package name="react-native-criando-testes-para-sua-aplicacao-main">
       <metrics statements="2" coveredstatements="2" conditionals="4" coveredconditionals="2" methods="1" coveredmethods="1"/>
